@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = getValue("name");
         const email = getValue("email");
         const pwd = getValue("password");
-        const conditions = document.getElementById("conditions").checked;
+        const terms = document.getElementById("terms").checked;
         const Dob = getValue("Dob");
 
         const newRow = userTableBody.insertRow();
-        newRow.innerHTML = `<td>${name}</td><td>${email}</td><td>${pwd}</td><td>${Dob}</td><td>${conditions}</td>`;
+        newRow.innerHTML = `<td>${name}</td><td>${email}</td><td>${pwd}</td><td>${Dob}</td><td>${terms}</td>`;
         clearFormFields();
 
-        saveUserEntry(name, email, pwd, Dob, conditions);
+        saveUserEntry(name, email, pwd, Dob, terms);
     });
 
     function getValue(id) {
@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const userEntries = JSON.parse(localStorage.getItem("userEntries")) || [];
     clearTable(); // Clear existing entries
 
-    userEntries.forEach(({ name, email, pwd, Dob, conditions }) => {
+    userEntries.forEach(({ name, email, pwd, Dob, terms }) => {
         const newRow = userTableBody.insertRow();
-        newRow.innerHTML = `<td>${name}</td><td>${email}</td><td>${pwd}</td><td>${Dob}</td><td>${conditions}</td>`;
+        newRow.innerHTML = `<td>${name}</td><td>${email}</td><td>${pwd}</td><td>${Dob}</td><td>${terms}</td>`;
     });
 }
 
@@ -80,9 +80,9 @@ function clearTable() {
 }
 
 
-    function saveUserEntry(name, email, pwd, Dob, conditions) {
+    function saveUserEntry(name, email, pwd, Dob, terms) {
         const userEntries = JSON.parse(localStorage.getItem("userEntries")) || [];
-        userEntries.push({ name, email, pwd, Dob, conditions });
+        userEntries.push({ name, email, pwd, Dob, terms });
         localStorage.setItem("userEntries", JSON.stringify(userEntries));
 
         loadUserEntries();
