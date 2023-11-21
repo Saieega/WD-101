@@ -12,7 +12,7 @@
             padding: 0;
         }
         .form-container {
-            width: 415px;
+            width: 400px;
             margin: auto;
             padding: 20px;
             background-color: #fff;
@@ -22,18 +22,18 @@
             margin-top: 20px;
         }
         .table-container {
-            width: 600px;
+            width: 700px;
             margin: auto;
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 15px;
+            margin-top: 20px;
         }
         h2 {
             text-align: center;
-            color: #008080;
+            color: #008000;
         }
         label {
             display: block;
@@ -47,9 +47,9 @@
         input[type="checkbox"] {
             width: 100%;
             padding: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             border: 1px solid #ccc;
-            border-radius: 3px;
+            border-radius: 4px;
             box-sizing: border-box;
         }
         button {
@@ -73,7 +73,7 @@
             text-align: left;
         }
         th {
-            background-color: #800000;
+            background-color: #008000;
             color: #fff;
         }
         tbody tr:hover {
@@ -93,20 +93,20 @@
             <input type="email" id="email" name="email" required placeholder="Enter your email">
 
             <label for="password">Password<font color=red>*</font></label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
 
-            <label for="Dob">Date of Birth<font color=red>*</font></label>
-            <input type="date" id="Dob" name="Dob" placeholder="dd/mm/yyyy" onchange="restrict()" required class="form-control date-input">
+            <label for="dob">Date of Birth<font color=red>*</font></label>
+            <input type="date" id="dob" name="dob" placeholder="dd/mm/yyyy" onchange="restrict()" required class="form-control date-input">
 
             <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I accept the terms and conditions</label>
+            <label for="terms">I accept the terms and conditions.</label>
 
             <button type="submit">Submit</button>
         </form>
     </div>
 
     <div class="table-container" id="output">
-        <h2>Entry's Form</h2>
+        <h2>Entries</h2>
         <table>
             <thead>
                 <tr>
